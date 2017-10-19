@@ -7,7 +7,7 @@
 
 int main()
 {
-	unsigned int metaData = 1996713991;
+	unsigned int metaData = 1996713989;
 			
 		//1996713989;
 		//1996713991;
@@ -37,8 +37,8 @@ int main()
 
 	cout << "Numero de balas: " <<numberOfBullets(metaData)<<endl;
 
-	cout << "Cargando: " << bulletAmount << " Balas..."<<endl;
-	metaData = addBullets(metaData, bulletAmount);
+	cout << "Cargando: " << BULLET_AMOUNT << " Balas..."<<endl;
+	metaData = addBullets(metaData, BULLET_AMOUNT);
 
 	cout << "Numero de balas: " << numberOfBullets(metaData) << endl;
 
@@ -88,39 +88,43 @@ void displayInfoMetadata(unsigned int metaData) {
 }
 
 int numberOfBullets(unsigned int metaData) {
-	metaData = metaData << leftBullets;
-	metaData = metaData >> rightBullets;
+	metaData = metaData << LEFT_BULLETS;
+	metaData = metaData >> RIGHT_BULLETS;
 
 	return metaData;
 }
 
 bool checkInfinteBullets(unsigned int metaData) { 
 		
-	metaData = metaData << leftInfiniteBullets;
-	metaData = metaData >> rightInfiniteBullets;
+	metaData = metaData << LEFT_INFINITE_BULLETS;
+	metaData = metaData >> RIGHT_INFINITE_BULLETS;
 
 	return metaData;
 }
 
 bool activateInfiniteBullets(unsigned int &metaData) {
 	bool changed = false;
-
-	if (!checkInfinteBullets(metaData)) {
-		metaData |= turnOnActiveBullets;
+	unsigned int aux = metaData;
+	if ((metaData |= TURN_ON_ACTIVE_BULLETS) != aux) {
 		changed = true;
 	}
 	return changed;
 }
 
 unsigned int resetBullets(unsigned int metaData) {
-	metaData &= resetBulletsOperator;
+	metaData &= RESET_BULLETS_OPERATOR;
 	return metaData;
 }
 
 unsigned int addBullets(unsigned int metaData, int bulletAmount) {
 	bulletAmount += numberOfBullets(metaData);
+	if (bulletAmount > MAX_BULLETS) {
+		bulletAmount = MAX_BULLETS;
+		//we are gonna leave bullets to max capacity
+		//Solo podemos cargar hasta 255 balas en los 8 bits
+	}
 	metaData = resetBullets(metaData);
-	bulletAmount = bulletAmount << leftReplaceBullets;
+	bulletAmount = bulletAmount << LEFT_REPLACE_BULLETS;
 	metaData |= bulletAmount;
 
 	return metaData;
@@ -128,31 +132,31 @@ unsigned int addBullets(unsigned int metaData, int bulletAmount) {
 
 int checkHp(unsigned int metaData) {
 	
-	metaData = metaData >> rightHp;
+	metaData = metaData >> RIGHT_HP;
 	return metaData;
 }
 
 int checkNumberOfAllies(unsigned int metaData) {
 
-	metaData = metaData << leftAllies;
-	metaData = metaData >> rightAllies;
+	metaData = metaData << LEFT_ALLIES;
+	metaData = metaData >> RIGHT_ALLIES;
 	return metaData;
 }
 
 int checkInvinsibleMode(unsigned int metaData) {
-	metaData = metaData << leftInvinsible;
-	metaData = metaData >> rightInvinsible;
+	metaData = metaData << LEFT_INVINSIBLE;
+	metaData = metaData >> RIGHT_INVINSIBLE;
 	return metaData;
 }
 
 int checkShield(unsigned int metaData) {
-	metaData = metaData << leftShield;
-	metaData = metaData >> rightShield;
+	metaData = metaData << LEFT_SHIELD;
+	metaData = metaData >> RIGHT_SHIELD;
 	return metaData;
 }
 
 int checkBerseker(unsigned int metaData) {
-	metaData = metaData << leftBerseker;
-	metaData = metaData >> rightBerseker;
+	metaData = metaData << LEFT_BERSEKER;
+	metaData = metaData >> RIGHT_BERSEKER;
 	return metaData;
 }

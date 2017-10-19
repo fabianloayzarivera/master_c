@@ -14,29 +14,30 @@ int checkInvinsibleMode(unsigned int metaData);
 int checkShield(unsigned int metaData);
 int checkBerseker(unsigned int metaData);
 
-const int bulletAmount = 4;
+const int BULLET_AMOUNT = 266;
+const int MAX_BULLETS = 255;
 
-const int leftBullets = 8;
-const int rightBullets = 24;
+const int LEFT_BULLETS = 8;
+const int RIGHT_BULLETS = 24;
 
-const int leftInfiniteBullets = 30;
-const int rightInfiniteBullets = 31;
+const int LEFT_INFINITE_BULLETS = 30;
+const int RIGHT_INFINITE_BULLETS = 31;
 
-const int turnOnActiveBullets = 2;
+const int TURN_ON_ACTIVE_BULLETS = 2;
 
-const int resetBulletsOperator = 4278255615;
-const int leftReplaceBullets = 16;
+const int RESET_BULLETS_OPERATOR = 4278255615;
+const int LEFT_REPLACE_BULLETS = 16;
 
-const int rightHp = 24;
+const int RIGHT_HP = 24;
 
-const int leftAllies = 16;
-const int rightAllies = 28;
+const int LEFT_ALLIES = 16;
+const int RIGHT_ALLIES = 28;
 
-const int leftInvinsible = 31;
-const int rightInvinsible = 31;
+const int LEFT_INVINSIBLE = 31;
+const int RIGHT_INVINSIBLE = 31;
 
-const int leftShield = 29;
-const int rightShield = 31;
+const int LEFT_SHIELD = 29;
+const int RIGHT_SHIELD = 31;
 
-const int leftBerseker = 28;
-const int rightBerseker = 31;
+const int LEFT_BERSEKER = 28;
+const int RIGHT_BERSEKER = 31;
