@@ -2,6 +2,7 @@
 //
 
 #include "stdafx.h"
+#include "string.h"
 #include <iostream>
 using namespace std;
 
@@ -25,6 +26,27 @@ int main()
 	
 	py = pz;
 
+	char *palabra = "Holaa";
+	char palabra2[] = "Hello";
+	cout << strlen(palabra)<<endl;
+	cout << strlen(palabra2)<<endl;
+	cout << palabra2 <<endl;
+
+	for each (char car in palabra2)
+	{
+		cout << car << " ";
+	}
+
+	char *ptrPalabra2 = palabra2;
+
+	ptrPalabra2 = "Problemas";
+
+	
+
+	cout <<endl<< ptrPalabra2<<endl<<palabra2;
+
+	 
+	
 	getchar();
     return 0;
 }

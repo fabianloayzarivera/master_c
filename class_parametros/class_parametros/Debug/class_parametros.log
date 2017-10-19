@@ -1,0 +1,4 @@
+﻿  classparametros.cpp
+c:\users\fabian.loayza\source\repos\class_parametros\class_parametros\classparametros.cpp(42): warning C4172: returning address of local variable or temporary: t
+  class_parametros.vcxproj -> c:\users\fabian.loayza\source\repos\class_parametros\Debug\class_parametros.exe
+  class_parametros.vcxproj -> c:\users\fabian.loayza\source\repos\class_parametros\Debug\class_parametros.pdb (Partial PDB)
