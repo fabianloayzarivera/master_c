@@ -1,0 +1,6 @@
+﻿  classtablaspunterosobjetos.cpp
+c:\users\fabian.loayza\source\repos\class_tablas_punteros_objetos\class_tablas_punteros_objetos\classtablaspunterosobjetos.cpp(18): warning C4101: 'p': unreferenced local variable
+c:\users\fabian.loayza\source\repos\class_tablas_punteros_objetos\class_tablas_punteros_objetos\classtablaspunterosobjetos.cpp(17): warning C4101: 'x': unreferenced local variable
+c:\users\fabian.loayza\source\repos\class_tablas_punteros_objetos\class_tablas_punteros_objetos\classtablaspunterosobjetos.cpp(16): warning C4101: 'o': unreferenced local variable
+  class_tablas_punteros_objetos.vcxproj -> c:\users\fabian.loayza\source\repos\class_tablas_punteros_objetos\Debug\class_tablas_punteros_objetos.exe
+  class_tablas_punteros_objetos.vcxproj -> c:\users\fabian.loayza\source\repos\class_tablas_punteros_objetos\Debug\class_tablas_punteros_objetos.pdb (Partial PDB)
