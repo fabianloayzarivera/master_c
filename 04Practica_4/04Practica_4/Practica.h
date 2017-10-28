@@ -18,4 +18,7 @@ void moveDeerEntity(TEntity *animal);
 void movePigEntity(TEntity *animal);
 void moveDonkeyEntity(TEntity *animal);
 
-void paintEntity(TEntity *jaguar);
+void paintJaguarEntity(TEntity *animal);
+void paintPigEntity(TEntity *animal);
+void paintDeerEntity(TEntity *animal);
+void paintDonkeyEntity(TEntity *animal);
