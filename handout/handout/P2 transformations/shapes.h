@@ -95,11 +95,11 @@ void drawLine(LINE line, COLOUR color = grey, bool doDrawDots = false)
 	 LINE myLine;
 
 	 VECTOR3D axisX1 = { 0,0,0 };
-	 VECTOR3D axisX2 = { 3,0,0 };
+	 VECTOR3D axisX2 = { 5,0,0 };
 	 VECTOR3D axisY1 = { 0,0,0 };
-	 VECTOR3D axisY2 = { 0,3,0 };
+	 VECTOR3D axisY2 = { 0,5,0 };
 	 VECTOR3D axisZ1 = { 0,0,0 };
-	 VECTOR3D axisZ2 = { -2,-2,0 };
+	 VECTOR3D axisZ2 = { 0,0,5 };
 
 	 std::vector<VECTOR3D> vecArrayX = { axisX1, axisX2 };
 	 myLine.P = vecArrayX;

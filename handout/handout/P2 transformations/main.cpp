@@ -165,17 +165,17 @@ void Render(void)
         drawDot(p, 0.25);
     }
 
-    // multiply
-//    {
-//        VECTOR3D a = {3,2,0};
-//        VECTOR3D b = {1,0.5,1};
-//        
-//        drawDot(a,0.25, green);
-//        drawDot(b,0.25, red);
-//        
-//        VECTOR3D p = Multiply(a,b);
-//        drawDot(p, 0.25);
-//    }
+     //multiply
+    {
+        VECTOR3D a = {3,2,0};
+        VECTOR3D b = {1,0.5,1};
+        
+        drawDot(a,0.25, green);
+        drawDot(b,0.25, red);
+        
+        VECTOR3D p = Multiply(a,b);
+        drawDot(p, 0.25);
+    }
     
     // magnitude
     {
@@ -194,12 +194,12 @@ void Render(void)
     }
     
     // normalize
-//    {
-//        VECTOR3D a = {2,3,0};
-//        VECTOR3D b = Normalize(a);
-//        drawDot(a,0.25, red);
-//        drawDot(b,0.25, darkred);
-//    }
+    {
+        VECTOR3D a = {2,3,0};
+        VECTOR3D b = Normalize(a);
+        drawDot(a,0.25, red);
+        drawDot(b,0.25, darkred);
+    }
     
     glPopMatrix();
 }
