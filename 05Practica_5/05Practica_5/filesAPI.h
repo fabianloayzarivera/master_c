@@ -4,4 +4,5 @@
 #include <string.h>
 FILE* openFilePlease(char *filename, char* openMode);
 void closeFilePlease(FILE *ptr);
-void writeInFilePlease(FILE* ptr, char *content, int cant);
+int writeInFilePlease(FILE* ptr, char *buffer, int cant);
+int readFromFilePlease(FILE* ptr, char bufferRead[], int cant);

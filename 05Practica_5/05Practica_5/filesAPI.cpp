@@ -13,10 +13,14 @@ void closeFilePlease(FILE *ptr) {
 	fclose(ptr);
 }
 
-void writeInFilePlease(FILE* ptr, char *content, int cant) {
+int writeInFilePlease(FILE* ptr, char *buffer, int cant) {
 	
-	char *subContent = "";
-	strncpy_s(subContent, cant , content, sizeof(content));
+	int charWritten = fwrite(buffer, cant, 1, ptr) * cant;
+	return charWritten;
+}
 
-	fputs(subContent, ptr);
+int readFromFilePlease(FILE* ptr, char bufferRead[], int cant) {
+
+	int charRead = fread(bufferRead, cant, 1, ptr) * cant;
+	return charRead;
 }

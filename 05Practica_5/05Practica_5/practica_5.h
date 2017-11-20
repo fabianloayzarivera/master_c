@@ -3,8 +3,14 @@
 #include <iostream>
 using namespace std;
 
+struct Employee {
+	int code;
+	char *name;
+};
+
 FILE* ptrToFile;
 
 void open(char *filename);
 void close();
-void write(char *content, int cant);
+int write(char *buffer, int cant);
+int read(char buffer[], int cant);
